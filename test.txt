@@ -1,0 +1,3 @@
+aja
+si apreto enter o escribo mas
+el programa igual funciona sin pararle a lo que escribi
