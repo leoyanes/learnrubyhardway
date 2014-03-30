@@ -1,10 +1,11 @@
 from_file, to_file = ARGV
-script = $0
+# script = $0
 
-puts "Copying from #{from_file} to #{to_file}"
+=begin
+# puts "Copying from #{from_file} to #{to_file}"
 
 #we could do these two on one line too, how?
-input = File.open(from_file)
+indata = File.open(from_file).read()
 indata = input.read()
 
 puts "The input file is #{indata.length} bytes long"
@@ -16,8 +17,12 @@ STDIN.gets
 output = File.open(to_file, 'w')
 output.write(indata)
 
-puts "Alright, all done."
+
 
 output.close()
 input.close()
+=end
 
+File.open(to_file, 'w').write(File.open(from_file).read())
+
+puts "Alright, all done."
